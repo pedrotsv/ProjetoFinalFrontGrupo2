@@ -1,0 +1,518 @@
+/* palheta de cor */
+:root {
+    --cor-primaria: #6B4423;        /* Marrom madeira */
+    --cor-secundaria: #8B6F47;      /* Marrom claro */
+    --cor-destaque: #D4A574;        /* Bege dourado */
+    --cor-texto: #333333;           /* Texto escuro */
+    --cor-texto-claro: #666666;     /* Texto cinza */
+    --cor-fundo: #efebe2;           /* Fundo claro */
+    --cor-branco: #FFFFFF;          /* Branco */
+    --cor-sucesso: #4CAF50;         /* Verde sucesso */
+    --cor-card: #eedfb8;            /* Cor card */
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.6;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: var(--cor-primaria);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Estilo da barra de navegação */
+.navbar {
+    padding: 1rem 0;
+}
+
+/* Estilo da logo */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--cor-branco);
+}
+
+/* Efeito hover na marca */
+.navbar-brand:hover {
+    color: var(--cor-destaque);
+}
+
+/* Estilo dos links do menu */
+.nav-link {
+    color: var(--cor-branco);
+    margin: 0 1rem;
+    transition: color 0.3s;
+}
+
+/* Efeito hover nos links */
+.nav-link:hover {
+    color: var(--cor-destaque);
+}
+
+/* Link ativo */
+.nav-link.active {
+    color: var(--cor-destaque);
+    font-weight: bold;
+}
+
+.banner {
+    /* Imagem de fundo com gradiente sobreposto para melhor legibilidade do texto */
+    background-image: linear-gradient(rgba(86, 42, 9, 0.7), rgba(133, 94, 40, 0.363)), url('img/banner1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--cor-branco);
+    padding: 8rem 2rem;
+    text-align: center;
+}
+
+/* Conteúdo do banner */
+.banner-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.banner-description {
+    margin: 2rem 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Botoes */
+.btn-custom {
+    background-color: var(--cor-destaque);
+    color: var(--cor-primaria);
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+}
+
+/* Efeito hover no botão */
+.btn-custom:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+    transform: translateY(-2px);
+}
+
+/* Seçoés gerais  */
+.products-section,
+.gallery-section,
+.about-section,
+.contato-section {
+    background-color: var(--cor-fundo);
+    padding: 4rem 2rem;
+}
+
+/* Títulos de seção */
+.section-title,
+.page-title {
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+/* Subtítulos de seção */
+.section-subtitle,
+.page-subtitle {
+    background-color: var(--cor-fundo);
+    font-size: 1.2rem;
+    color: var(--cor-texto-claro);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Cards produtos  */
+.product-card {
+    background-color: var(--cor-card);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efeito hover no card */
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Ícone do produto */
+.product-image {
+    font-size: 4rem;
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+}
+
+/* Título do produto */
+.product-card h3 {
+    font-size: 1.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+}
+
+/* Descrição do produto */
+.product-card p {
+    color: var(--cor-texto-claro);
+    font-size: 1rem;
+}
+
+/* Galeria imagens  */
+.galeria-section {
+    background-color: var(--cor-fundo);
+    text-align: center;
+}
+
+.galeria-item {
+    background-color: var(--cor-card);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.367);
+    transition: transform 0.3s;
+}
+
+.galeria-tex {
+    padding: 15%
+}
+
+/* Efeito hover na galeria */
+.galeria-item:hover {
+    transform: scale(0.6);
+}
+
+/* Imagens da galeria */
+.galeria-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.galeria-item:hover {
+    transform: scale(1.1);
+}
+
+.galeria-sobre {
+    width: 500px; 
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.367);
+    transition: transform 0.3s;
+}
+
+.galeria-sobre:hover {
+    transform: scale(1.3);
+}
+
+/* VIDEO */
+
+
+section  {
+    background-color: var(--cor-fundo);
+}
+
+.video-responsive {
+    position: relative;
+    padding-bottom: 50%; 
+    overflow: hidden;
+    max-width: 100%; /* Limita o tamanho máximo do vídeo */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.367);
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+}
+
+/* pagina sobre  */
+.about-content {
+    background-color: var(--cor-fundo);
+    padding: 2rem;
+}
+
+.about-content h2 {
+    color: var(--cor-primaria);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* Imagem/ícone sobre */
+.about-image {
+    background-color: var(--cor-fundo);
+    text-align: center;
+    font-size: 15rem;
+    color: var(--cor-destaque);
+}
+
+/* Cards de valores */
+
+.valor-card {
+    background-color: var(--cor-card);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.valor-card:hover {
+    transform: translateY(-5px);
+}
+
+.valor-icon {
+    font-size: 3rem;
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+}
+
+.valor-card h3 {
+    color: var(--cor-primaria);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.valor-card p {
+    color: var(--cor-texto-claro);
+}
+
+/* Box de encomendas personalizadas */
+.custom-order-box {
+    background: var(--cor-primaria);
+    color: var(--cor-branco);
+    padding: 3rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.custom-order-box h2 {
+    color: var(--cor-branco);
+    margin-bottom: 1rem;
+}
+
+.custom-order-box p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* pagina contato  */
+.contato-form-container {
+    background-color: var(--cor-card);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contato-form-container h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 1.5rem;
+}
+
+/* Grupos de formulário */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Labels do formulário */
+.form-group label {
+    display: block;
+    color: var(--cor-primaria);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* formulário */
+.form-control {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--cor-destaque);
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+/* Efeito focus nos inputs */
+.form-control:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+}
+
+/* Mensagem de sucesso */
+.success-message {
+    background-color: var(--cor-sucesso);
+    color: var(--cor-branco);
+    padding: 1.5rem;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.success-message i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Informações de contato */
+.contato-info {
+    padding: 1rem;
+}
+
+.contato-info h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 1.5rem;
+}
+
+/* Cards de contato */
+.contcontatoact-card {
+    background-color: var(--cor-fundo);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.contato-card:hover {
+    transform: translateX(5px);
+}
+
+/* Ícone do card de contato */
+.contato-icon {
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+    margin-right: 1.5rem;
+}
+
+/* Detalhes do contato */
+.contato-details h3 {
+    color: var(--cor-primaria);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contato-details p {
+    color: var(--cor-texto-claro);
+    margin-bottom: 0.5rem;
+}
+
+/* Link de contato */
+.contato-link {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.contato-link:hover {
+    color: var(--cor-primaria);
+}
+
+/* Horário de atendimento */
+.horaAtendimento {
+    background-color: var(--cor-destaque);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+}
+
+.horaAtendimento h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+}
+
+.horaAtendimento p {
+    color: var(--cor-texto);
+    margin-bottom: 0.3rem;
+}
+
+/* Rodapé  */
+footer {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    padding: 3rem 2rem 1rem;
+}
+
+footer h4 {
+    color: var(--cor-destaque);
+    margin-bottom: 1rem;
+}
+
+footer p {
+    color: var(--cor-branco);
+    font-size: 0.9rem;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--cor-branco);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--cor-destaque);
+}
+
+/* Links de redes sociais */
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: var(--cor-branco);
+    font-size: 2rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--cor-destaque);
+    transform: scale(1.2);
+}
+
+/* Parte inferior do rodapé */
+.footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--cor-secundaria);
+}
+

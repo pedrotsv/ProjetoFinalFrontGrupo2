@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - LIGNO Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <i class="bi bi-tree"></i> LIGNO store
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre.html">Sobre Nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contato.html">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Seção form -->
+    <section class="contato-section">
+        <div class="container">
+            <h1 class="section-title">Entre em Contato</h1>
+            <p class="section-subtitle">Estamos prontos para atender você! Envie sua mensagem ou encomenda.</p>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contato-form-container">
+                        <h2>Envie uma Mensagem</h2>
+                        <form id="contatoForm" onsubmit="enviarFormulario(event )">
+                            <div class="form-group">
+                                <label for="nome">Nome Completo</label>
+                                <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="seuemail@exemplo.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone">Telefone</label>
+                                <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="(00) 00000-0000">
+                            </div>
+                            <div class="form-group">
+                                <label for="assunto">Assunto</label>
+                                <input type="text" id="assunto" name="assunto" class="form-control" placeholder="Qual o motivo do contato?" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="mensagem">Mensagem</label>
+                                <textarea id="mensagem" name="mensagem" class="form-control" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn-custom">Enviar Mensagem</button>
+                        </form>
+                        <div id="successMessage" class="success-message" style="display: none;">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <p>Mensagem enviada com sucesso! Entraremos em contato em breve.</p>
+                        </div>
+                        <div id="errorMessage" class="error-message" style="display: none;">
+                            <i class="bi bi-x-circle-fill"></i>
+                            <p>Erro ao enviar mensagem. Por favor, tente novamente mais tarde.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="contato-info">
+                        <h2>Outras Formas de Contato</h2>
+                        <div class="contato-card">
+                            <div class="contato-icon"><i class="bi bi-whatsapp"></i></div>
+                            <div class="contato-details">
+                                <h3>WhatsApp</h3>
+                                <p>(24) 555-5555</p>
+                                <a href="https://wa.me/55555555555" target="_blank" class="contato-link">Enviar mensagem <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="contato-card">
+                            <div class="contato-icon"><i class="bi bi-envelope-fill"></i></div>
+                            <div class="contato-details">
+                                <h3>E-mail</h3>
+                                <p>contato@lignostore.com</p>
+                                <a href="mailto:contato@lignostore.com" class="contato-link">Enviar e-mail <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="contato-card">
+                            <div class="contato-icon"><i class="bi bi-instagram"></i></div>
+                            <div class="contato-details">
+                                <h3>Instagram</h3>
+                                <p>@lignostore</p>
+                                <a href="https://www.instagram.com/lignostore/" target="_blank" class="contato-link">Visitar perfil <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="horaAtendimento">
+                            <h3><i class="bi bi-clock-fill"></i> Horário de Atendimento</h3>
+                            <p>Segunda a Sexta: 9h às 18h</p>
+                            <p>Sábado: 9h às 13h</p>
+                            <p>Domingo: Fechado</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>LIGNO store.</h4>
+                    <p>Joias em madeira e resina, feitas artesanalmente com amor e dedicação.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/lignostore/" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.facebook.com/Lignostore" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.youtube.com/@lignostore5789" target="_blank" title="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LIGNO Store. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
